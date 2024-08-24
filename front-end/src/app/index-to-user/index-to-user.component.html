@@ -1,0 +1,26 @@
+<div class="bg-image h-screen flex flex-col justify-center items-center p-6">
+    <h1 class="text-3xl font-bold mb-4 text-white">Painel Inicial</h1>
+    <h2 class="text-center font-bold text-white mb-6 text-xl"> <!-- Increased font size for h2 -->
+        Aqui você pode publicar e ver publicações já postadas por outros usuários. <br> 
+        <span class="font-semibold ">Obs:</span> Todas as postagens passam por filtro para aprovação dos administradores do site. <br> Garantindo assim a qualidade do site e que o projeto cumpra sua premissa.
+    </h2>
+
+    <button (click)="goToAdd()" class="bg-purple-950 hover:bg-pink-700 text-white py-3 px-6 rounded-lg shadow-md transition duration-200 ease-in-out mb-2">
+        Adicionar publicação
+    </button>
+
+    <button class="bg-purple-950 hover:bg-pink-700 text-white py-3 px-6 rounded-lg shadow-md transition duration-200 ease-in-out mb-2" (click)="goToMyPosts()">
+        Minhas publicações
+    </button>
+    <button class="bg-purple-950 hover:bg-pink-700 text-white py-3 px-6 rounded-lg shadow-md transition duration-200 ease-in-out mb-2" (click)="goToViews()">
+        Ver outras publicações
+    </button>
+
+    <button class="bg-purple-950 hover:bg-pink-700 text-white py-3 px-6 rounded-lg shadow-md transition duration-200 ease-in-out mb-2" (click)="backToLogin()">
+        Sair da conta
+    </button>
+
+    <button (click)="backToAbout()" class="text-white hover:underline mt-4" >
+        Voltar à tela sobre o projeto
+    </button>
+</div>

@@ -1,0 +1,69 @@
+<div class="flex h-screen items-center justify-center bg-gradient-to-r from-pink-400 to-purple-500">
+    <div class="w-full max-w-xs p-8 bg-white rounded-lg shadow-xl">
+      <h2 class="text-3xl font-bold text-gray-800 text-center mb-6">Crie sua conta!</h2>
+      <form [formGroup]="formulario" (ngSubmit)="onSubmit()">
+        <div className="mb-6">
+          <label htmlFor="nome" class="block text-gray-700 font-medium mb-2">Nome Completo</label>
+          <input
+            type="text"
+            id="nome"
+            formControlName="name"
+            class="w-full px-4 py-2 border ${errors.nome ? 'border-red-500' : 'border-gray-300'} rounded-lg focus:outline-none focus:ring-2 focus:ring-pink-500 transition"
+            placeholder="Digite seu nome completo"
+          
+          />
+          
+        </div>
+        <div class="mb-6">
+          <label htmlFor="email" class="block text-gray-700 font-medium mb-2">E-mail</label>
+          <input
+            type="email"
+            id="email"
+            formControlName="email"
+            className="w-full px-4 py-2 border ${errors.email ? 'border-red-500' : 'border-gray-300'} rounded-lg focus:outline-none focus:ring-2 focus:ring-pink-500 transition"
+            placeholder="Digite seu e-mail"
+            
+          />
+
+        </div>
+        <div class="mb-6">
+          <label htmlFor="senha" class="block text-gray-700 font-medium mb-2">Senha</label>
+          <input
+            type="password"
+            id="senha"
+            formControlName="password"
+            class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-pink-500 transition"
+            placeholder="Crie uma senha"
+            
+          />
+         
+        </div>
+        <div class="mb-6">
+          <label htmlFor="confirmaSenha" class="block text-gray-700 font-medium mb-2">Confirmar Senha</label>
+          <input
+            type="password"
+            id="confirmaSenha"
+            formControlName="confirmPassword"
+            class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-pink-500 transition"
+            placeholder="Confirme sua senha"
+          />
+
+        </div>
+        <button
+          type="submit"
+          class="w-full bg-pink-500 text-white py-2 rounded-lg transition duration-200 ease-in-out hover:bg-pink-600 focus:outline-none focus:ring-2 focus:ring-pink-700"
+        >
+          Criar Conta
+        </button>
+
+        <button
+          type="button"
+          class="mt-4 w-full bg-gray-200 text-gray-800 py-2 rounded-lg transition duration-200 ease-in-out hover:bg-gray-300 focus:outline-none focus:ring-2 focus:ring-gray-400"
+          (click)="handleClick()"
+        >
+          Já tenho uma conta
+        </button>
+      </form>
+    </div>
+  </div>
+

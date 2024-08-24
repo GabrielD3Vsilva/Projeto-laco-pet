@@ -1,0 +1,12 @@
+.bg-image {
+    background-image: url('../../assets/Imagem do WhatsApp de 2024-08-20 à(s) 19.27.54_9c355a10.jpg');
+    background-size: cover; /* Cobre toda a área do contêiner */
+    background-position: center; /* Centraliza a imagem */
+    background-repeat: no-repeat; /* Não repete a imagem */
+    width: 100vw; /* Largura total da viewport */
+    height: 100vh; /* Altura total da viewport */
+    position: absolute; /* Para garantir que cubra a tela corretamente */
+    top: 0; /* Alinha ao topo */
+    left: 0; /* Alinha à esquerda */
+    z-index: -1; /* Se necessário, envie para trás outros elementos */
+}

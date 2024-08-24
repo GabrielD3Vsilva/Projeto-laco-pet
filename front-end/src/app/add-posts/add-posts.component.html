@@ -1,0 +1,19 @@
+<div class="bg-image bg-gray-100 h-screen flex items-center justify-center">
+    <div class="max-w-md mx-auto p-6 bg-white rounded-lg shadow-md opacity-80">
+        <h1 class="text-2xl font-semibold mb-4">Nova Postagem</h1>
+        <form class="flex flex-col items-center" [formGroup]="formulario" (ngSubmit)="onSubmit()">
+            <!-- Descrição da Postagem -->
+            <label for="descricao" class="block text-sm font-medium text-gray-700">Descrição</label>
+            <textarea formControlName="description" id="descricao" name="descricao" rows="4" class="mt-1 p-2 w-full border rounded-md focus:ring focus:ring-blue-300 border-b-2 border-black" placeholder="Se for necessário adicione informações de contato"></textarea>
+
+            <!-- Upload de Imagem -->
+            <label for="imagem" class="block mt-4 text-sm font-medium text-gray-700">Imagem</label>
+            <input type="file" (change)="onFileChange($event)" id="imagem" name="imagem" accept="image/*" class="mt-1 border-b-2 border-black p-2 w-full border rounded-md focus:ring focus:ring-blue-300  text-white">
+
+            <!-- Botão de Postar -->
+            <button type="submit" class="mt-4 bg-purple-950 hover:bg-pink-700 text-white py-3 px-6 rounded-lg shadow-md transition duration-200 ease-in-out mb-2" >Postar</button>
+
+
+        </form>
+    </div>
+</div>

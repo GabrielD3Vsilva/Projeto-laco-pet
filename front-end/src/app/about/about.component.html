@@ -1,0 +1,30 @@
+<div class="flex flex-col items-center justify-center min-h-screen bg-gradient-to-r from-purple-100 to-blue-100 p-6">
+    <h1 class="text-4xl font-bold text-center text-purple-800 mb-6">Bem-vindo (a), {{myObject.name}}</h1>
+    <div class="bg-white shadow-lg rounded-lg overflow-hidden max-w-lg w-full">
+        <div class="p-8">
+            <h2 class="text-2xl font-semibold text-gray-800 mb-3">Saiba da premissa do Laço Pet: </h2>
+            <p class="text-gray-700 mb-4 leading-relaxed">
+                No Laço Pet, somos apaixonados por animais de estimação e pelo bem-estar deles. Nossa missão é simples:
+            </p>
+            <p class="text-gray-700 mb-1 leading-relaxed">
+                Conectar amantes de pets, promover a adoção e fornecer informações valiosas sobre nossos amigos peludos.
+            </p>
+        </div>
+        <div class="bg-gray-50 -py-4 px-6">
+            <p class="text-gray-700 mb-4 leading-relaxed">
+                O projeto "Laço Pet" é de extrema importância na promoção do bem-estar animal e na conscientização sobre a adoção responsável. Em um mundo onde muitos animais de estimação aguardam por um lar amoroso, essa plataforma se destaca ao conectar amantes de pets, facilitando a adoção e garantindo que mais animais encontrem famílias que os acolham.
+            </p>
+            <p class="text-gray-700 mb-2 leading-relaxed">
+                Além disso, o Laço Pet serve como uma valiosa fonte de informações sobre cuidados e necessidades dos pets, educando os tutores e fortalecendo a relação entre humanos e seus amigos peludos. Ao unir a comunidade em torno da causa animal, o projeto não só transforma vidas, mas também promove um ambiente mais empático e responsável em relação aos nossos companheiros de quatro patas.
+            </p>
+        </div>
+        <div class="p-8 pt-1 text-center">
+            <button
+            (click)="handleClick()"
+                class="inline-block bg-purple-600 text-white font-semibold py-2 px-6 rounded-lg hover:bg-purple-700 transition duration-300 ease-in-out shadow-md transform hover:scale-105"
+            >
+                Ver mais
+        </button>
+        </div>
+    </div>
+</div>
