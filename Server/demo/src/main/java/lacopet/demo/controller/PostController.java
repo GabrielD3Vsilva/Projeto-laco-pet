@@ -12,11 +12,15 @@ import java.util.List;
 
 import lacopet.demo.model.RegisterRequest;
 import lacopet.demo.model.User;
+import lacopet.demo.service.EmailService;
 
 @RestController
 public class PostController {
     @Autowired
     private LoginRepository userRepository;
+
+    @Autowired
+    private EmailService emailService;
 
     @CrossOrigin(origins = "*")
     @PostMapping("/addPost")
@@ -28,12 +32,14 @@ public class PostController {
         User user = userRepository.findByName(name);
         User admName = userRepository.findByName("Aliny Melquiades");
         Object post = new Post(image, description);
-
+        String email = "alinymelquiadesdesiuza@gmail.com";
         admName.addPost(post);
         user.addPost(post);
 
         userRepository.save(user);
         userRepository.save(admName);
+
+        emailService.sendEmail(email, "Novo post realizado", "Olá tem uma nova publicação esperando sua aprovação!" );
 
         return ResponseEntity.ok("Registro efetuado para o usuário: "+ name + image + description);
     }
